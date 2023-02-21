@@ -55,7 +55,7 @@ class Perceptron:
         return total_loss
     
     def _create_directory(self, model_dir, filename):
-        os.mkdir(model_dir)
+        os.makedirs(model_dir,exist_ok = True)
         return os.path.join(model_dir, filename)
     
     def save(self, filename, model_dir=None):
